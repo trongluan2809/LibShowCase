@@ -5,20 +5,19 @@
     android:id="@+id/showCaseMessageViewLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingBottom="36dp"
-    android:paddingLeft="36dp"
-    android:paddingRight="20dp"
-    android:paddingTop="20dp"
-    android:maxWidth="420dp">
+    android:background="#000000"
+    android:paddingLeft="@dimen/_30sdp"
+    android:paddingRight="@dimen/_15sdp"
+    android:paddingTop="@dimen/_15sdp"
+    android:maxWidth="@dimen/_320sdp">
 
     <ImageView
         android:id="@+id/imageViewShowCase"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
-        android:visibility="gone"
-        android:layout_marginTop="16dp"
+        android:visibility="visible"
         android:src="@drawable/rounded_rectangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,15 +25,15 @@
 
     <LinearLayout
         android:id="@+id/layoutTexts"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
         android:orientation="vertical"
-        app:layout_constraintEnd_toStartOf="@+id/imageViewShowCaseClose"
-        app:layout_constraintStart_toEndOf="@+id/imageViewShowCase"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewShowCase">
 
         <TextView
             android:id="@+id/textViewShowCaseTitle"
@@ -43,7 +42,7 @@
             android:text="Title"
             android:breakStrategy="simple"
             android:textColor="@color/white"
-            android:visibility="gone"
+            android:visibility="visible"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -53,7 +52,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:breakStrategy="simple"
-            android:visibility="gone"
+            android:visibility="visible"
+            android:text="description"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
